@@ -1,0 +1,5 @@
+feedback = input('Оцените развлекательный комплекс:')
+searcking1 = feedback.find('весело')
+searcking2 = feedback.find('увлекательно')
+searcking3 = feedback.find('развлечения')
+print('Результат анализа:', searcking1, searcking2, searcking3)
