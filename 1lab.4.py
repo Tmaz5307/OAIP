@@ -1,2 +1,3 @@
 a = open("words.txt", encoding="utf-8")
-print(min(a))
+b = a.read().split()
+print(max(b))
