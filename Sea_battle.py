@@ -1,31 +1,29 @@
 class Ship:
-    def __init__(self, length):
+    def __init__(self, length, amount):
         self.length = length
+        self.amount = amount
 
 
 class Battleship(Ship):
-    def __init__(self, amount):
-        super().__init__(length=4)
-        self.amount = amount
+    def __init__(self):
+        super().__init__(length=4, amount=1)
 
 
 class Cruiser(Ship):
-    def __init__(self, amount):
-        super().__init__(length=3)
-        self.amount = amount
+    def __init__(self):
+        super().__init__(length=3, amount=1)
 
 
 class Destroyer(Ship):
-    def __init__(self, amount):
-        super().__init__(length=2)
-        self.amount = amount
+    def __init__(self):
+        super().__init__(length=2, amount=2)
 
 
 class Game:
-    def __init__(self, width, length, position):
+    def __init__(self, width, length, ships):
         self.width = width
         self.length = length
-        self.position = position
+        self.ships = ships
 
     def place_ship(self, ship):
         pass

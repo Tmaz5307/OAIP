@@ -10,6 +10,12 @@ class ElementalMagic(Spell):
         self.frostbite = f
 
 
+class ForbiddenMagic(Spell):
+    def __init__(self, m, d):
+        Spell.__init__(self, m)
+        self.desiccation = d
+
+
 class Firemagic(ElementalMagic):
     def __init__(self, m, fd):
         ElementalMagic.__init__(self, m, 7, 0)
@@ -22,5 +28,12 @@ class Frostmagic(ElementalMagic):
         self.frost_damage = frd
 
 
-Frost_Spear = Frostmagic(12, 8)
+class Darkmagic(ForbiddenMagic):
+    def __init__(self, m, dd):
+        ForbiddenMagic.__init__(self, m, 20)
+        self.dark_damage = dd
+
+
+Frostspear = Frostmagic(12, 8)
 Fireball = Firemagic(10, 5)
+Dark_fog = Darkmagic(13, 9)
